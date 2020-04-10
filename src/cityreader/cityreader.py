@@ -69,7 +69,6 @@ for c in cities:
 # Tucson: (32.1558,-110.8777)
 # Salt Lake City: (40.7774,-111.9301)
 
-# TODO Get latitude and longitude values from the user
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   latS, latB = (lat1, lat2) if lat1 < lat2 else (lat2, lat1)
@@ -81,8 +80,8 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
 
   return within
 
-#lat1, lon1 = map(float, input("Enter lat1,lon1:").split(","))
-#lat2, lon2 = map(float, input("Enter lat2,lon2:").split(","))
+lat1, lon1 = map(float, input("Enter lat1,lon1:").split(","))
+lat2, lon2 = map(float, input("Enter lat2,lon2:").split(","))
 
-#for c in cityreader_stretch(lat1, lon1, lat2, lon2, cities):
-#    print(c.name + ":", (c.lat, c.lon))
+for c in cityreader_stretch(lat1, lon1, lat2, lon2, cities):
+    print(c.name + ":", (c.lat, c.lon))
